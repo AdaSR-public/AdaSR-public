@@ -62,7 +62,7 @@ if __name__ == "__main__":
     # load test dataset
     if args.data_dir.find('DIV2K') != -1:
         data_type = 'DIV2K'
-        lr_data_dir = os.path.join(args.data_dir, 'DIV2K_valid_LR_bicubic/X4')
+        lr_data_dir = os.path.join(args.data_dir, f'DIV2K_valid_LR_bicubic/X{args.scale}')
         target_data_dir = os.path.join(args.data_dir, 'DIV2K_valid_HR/')
         split_by = args.split_by
             
@@ -71,8 +71,8 @@ if __name__ == "__main__":
 
     elif args.data_dir.find('test8k') != -1:
         data_type = 'test8k'
-        lr_data_dir = os.path.join(args.data_dir, 'LR/X4')
-        target_data_dir = os.path.join(args.data_dir, 'HR/X4')
+        lr_data_dir = os.path.join(args.data_dir, f'LR/X{args.scale}')
+        target_data_dir = os.path.join(args.data_dir, f'HR/X{args.scale}')
         split_by = args.split_by
         
         lr_image_list = sorted(glob.glob(os.path.join(lr_data_dir, '*')))
@@ -80,8 +80,8 @@ if __name__ == "__main__":
         
     elif args.data_dir.find('test4k') != -1:
         data_type = 'test4k'
-        lr_data_dir = os.path.join(args.data_dir, 'LR/X4')
-        target_data_dir = os.path.join(args.data_dir, 'HR/X4')
+        lr_data_dir = os.path.join(args.data_dir, f'LR/X{args.scale}')
+        target_data_dir = os.path.join(args.data_dir, f'HR/X{args.scale}')
         split_by = args.split_by
 
         lr_image_list = sorted(glob.glob(os.path.join(lr_data_dir, '*')))
@@ -89,8 +89,8 @@ if __name__ == "__main__":
     
     elif args.data_dir.find('test2k') != -1:
         data_type = 'test2k'
-        lr_data_dir = os.path.join(args.data_dir, 'LR/X4')
-        target_data_dir = os.path.join(args.data_dir, 'HR/X4')
+        lr_data_dir = os.path.join(args.data_dir, f'LR/X{args.scale}')
+        target_data_dir = os.path.join(args.data_dir, f'HR/X{args.scale}')
         split_by = args.split_by
 
         lr_image_list = sorted(glob.glob(os.path.join(lr_data_dir, '*')))
