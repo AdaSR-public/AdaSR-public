@@ -56,7 +56,7 @@ Download the [pretrained QP-NET](https://drive.google.com/drive/folders/1tK9UGbf
 
 ### 3. Run evaluating for AdaSR
 ```
-./script/eval_0.sh
+./script/eval.sh
 ```
 
 If you want to run the evaluation more sophisticated, you can use the code below.
